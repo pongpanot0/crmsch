@@ -1,0 +1,9 @@
+../node/node_modules
+../timeline/node_modules
+/timeline/node_modules
+/node/node_modules
+../node_modules
+
+../node_modules
+../frontend/node/node_modules
+../frontend/timeline/node_modules
