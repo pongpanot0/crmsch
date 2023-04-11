@@ -1,0 +1,41 @@
+.widget-container{
+  display: flex;
+  align-items: space-between;
+  .widget{
+    width: 325px;
+    height: 175px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #ffff;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #939393;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    @media only screen and (max-width:1600px) {
+      width: 300px;
+
+    }
+    .icon{
+      width: 100px;
+      font-size: 120px;
+      text-align: center;
+      color: #000;
+    }
+    .value{
+      text-align: center;
+      width: 175px;
+      color: #000;
+    }
+    .top{
+      font-size: 30px;
+      color: #000;
+    }
+    .bottom{
+      font-size: 20px;
+      margin-top:10px ;
+      color: #000;
+    }
+  }
+
+}
