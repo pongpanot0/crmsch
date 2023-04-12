@@ -8,7 +8,6 @@ exports.creted = async (req, res) => {
     .add(1, "days")
     .toISOString();
   const end = moment(req.body.end).add(1, "days").toISOString();
-  console.log(req.body);
   const insert = `insert into datestamp (title,start,end) value ('${title}','${start}','${end}')`;
   db.query(insert, (err, result) => {
     if (err) {

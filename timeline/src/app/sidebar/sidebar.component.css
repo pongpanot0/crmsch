@@ -3,7 +3,8 @@
 }
 
 .sidenav {
-  width: 200px;
+  width: 250px;
+  background-color: #f0999f;
 }
 
 .sidenav .mat-toolbar {
@@ -14,4 +15,12 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+mat-toolbar {
+  color: #838386;
+}
+@media screen and (max-width: 768px) {
+  .hid {
+    display: none;
+  }
 }

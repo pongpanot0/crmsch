@@ -12,7 +12,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
@@ -24,15 +24,29 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { FirstchartComponent } from './firstchart/firstchart.component';
+import { CardComponent } from './card/card.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { TopWidgetComponent } from './top-widget/top-widget.component';
+import { Apiservice } from './shared/api';
+import { AreachartComponent } from './areachart/areachart.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SidebarComponent,
-    DashboardComponent,
     TaskComponent,
-    AddjobsComponent
+    AddjobsComponent,
+    FirstchartComponent,
+    CardComponent,
+    DashboardComponent,
+    TopWidgetComponent,
+    AreachartComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -52,9 +66,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgApexchartsModule,
+    FlexLayoutModule,
+    
   ],
-  providers: [],
+  providers: [Apiservice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
