@@ -176,16 +176,12 @@ export class TaskComponent {
       ],
     },
   ];
-  constructor(public dialog: MatDialog) {
- 
-  }
+  constructor(public dialog: MatDialog) {}
 
   openDialog(items: any): void {
     this.dialog.open(CardDetailComponent, {
-      data: {
-        id: items,
-      },
-      width: '250px',
+      data: items,
+      width: '768px',
     });
   }
 

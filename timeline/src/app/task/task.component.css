@@ -5,7 +5,15 @@
   display: inline-block;
   vertical-align: top;
 }
-
+@media screen and (max-width: 768px) {
+  .container {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
 .list {
   border: solid 1px #ccc;
   min-height: 60px;
@@ -109,6 +117,6 @@ mat-fab {
 .button-insert {
   width: 100%;
 }
-mat-card{
+mat-card {
   cursor: pointer;
 }

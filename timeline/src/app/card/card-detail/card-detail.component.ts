@@ -6,7 +6,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./card-detail.component.css'],
 })
 export class CardDetailComponent implements OnInit {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { id: any }) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     console.log(data);
   }
 
