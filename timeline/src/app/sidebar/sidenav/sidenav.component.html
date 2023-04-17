@@ -1,0 +1,29 @@
+<div class="navbar">
+  <div class="top">
+    <mat-icon>notifications_none</mat-icon>
+  </div>
+  <div class="user">
+    <img
+      src="https://images.unsplash.com/photo-1661956600684-97d3a4320e45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+      alt=""
+    />
+    <h4 class="name">Admin</h4>
+    <p class="mail">Admin@gmail.com</p>
+  </div>
+  <div class="menu">
+    <div class="menu-head">
+    
+    </div>
+    <div class="menu-items">
+      <button mat-button [routerLink]="['/dashboard']" class="menu-button">
+        <mat-icon>dashboard</mat-icon> <span>Home</span>
+      </button>
+      <button mat-button class="menu-button" [routerLink]="['/dashboard/tasks']">
+        <mat-icon>message</mat-icon> <span>Post</span>
+      </button>
+      <button mat-button class="menu-button" [routerLink]="['/dashboard/setting']">
+        <mat-icon>settings</mat-icon> <span>Setting</span>
+      </button>
+    </div>
+  </div>
+</div>

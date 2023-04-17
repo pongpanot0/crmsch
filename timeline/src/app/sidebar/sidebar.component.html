@@ -1,43 +1,20 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer
-    class="sidenav"
-    fixedInViewport
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async) === false"
-  >
-    <mat-toolbar>CRM</mat-toolbar>
-
-    <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard">Dashboard</a>
-      <a mat-list-item routerLink="/dashboard/addjob">addjob</a>
-      <a mat-list-item routerLink="#">Link 3</a>
-    </mat-nav-list>
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidebar mode="side" opened> 
+  <app-sidenav></app-sidenav>  
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-  
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        class="hid"
-        mat-icon-button
-        (click)="drawer.toggle()"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>CRM</span>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
+    <div class="content">
+      <div class="toolbar">
+        <mat-toolbar>
+          <mat-icon class="pointer" (click)="sidebar.toggle()">menu</mat-icon>
+          <div class="box">
+            <mat-icon>search</mat-icon>
+            <mat-icon>bookmark_border</mat-icon>
+            <mat-icon>mail_outline</mat-icon>
+          </div>
+        </mat-toolbar>
+      </div>
+      <div class="main"><router-outlet></router-outlet></div>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

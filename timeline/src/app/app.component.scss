@@ -1,5 +1,8 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 @include mat.core();
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@500&family=Kanit:wght@100&display=swap");
+
 $bright-navy-blue-palette: (
   50: #e3f2fd,
   100: #badffb,
@@ -30,7 +33,7 @@ $bright-navy-blue-palette: (
     A200: rgba(black, 0.87),
     A400: white,
     A700: white,
-  )
+  ),
 );
 $gainsboro-palette: (
   50: #f9f9fa,
@@ -62,7 +65,7 @@ $gainsboro-palette: (
     A200: rgba(black, 0.87),
     A400: rgba(black, 0.87),
     A700: white,
-  )
+  ),
 );
 $crimson-palette: (
   50: #ffebef,
@@ -86,18 +89,27 @@ $crimson-palette: (
     700: white,
     800: white,
     900: white,
-  )
+  ),
 );
 $bluesky-primary: mat.define-palette($bright-navy-blue-palette, 700, 300, 900);
 $bluesky-accent: mat.define-palette($gainsboro-palette, 300, 100, 500);
 $bluesky-warn: mat.define-palette($crimson-palette, 700);
-$bluesky-theme: mat.define-light-theme((
-  color: (
-    primary: $bluesky-primary,
-    accent: $bluesky-accent,
-    warn: $bluesky-warn,
+$bluesky-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $bluesky-primary,
+      accent: $bluesky-accent,
+      warn: $bluesky-warn,
+    ),
   )
-));
+);
 @include mat.all-component-themes($bluesky-theme);
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-family: "Kanit", sans-serif;
+}

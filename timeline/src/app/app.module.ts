@@ -23,7 +23,7 @@ import { AddjobsComponent } from './addjobs/addjobs.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { FirstchartComponent } from './firstchart/firstchart.component';
 import { CardComponent } from './card/card.component';
@@ -32,6 +32,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TopWidgetComponent } from './top-widget/top-widget.component';
 import { Apiservice } from './shared/api';
 import { AreachartComponent } from './areachart/areachart.component';
+import { TableComponent } from './table/table.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SettingComponent } from './setting/setting.component';
+import { SidenavComponent } from './sidebar/sidenav/sidenav.component';
+import { CompanyComponent } from './setting/company/company.component';
+import { UsersComponent } from './setting/users/users.component';
+import { NotifyComponent } from './setting/notify/notify.component';
+import { BoardService } from './shared/board.service';
+import { MatChip, MatChipsModule } from '@angular/material/chips';
+import { CardDetailComponent } from './card/card-detail/card-detail.component';
 
 
 @NgModule({
@@ -46,6 +56,14 @@ import { AreachartComponent } from './areachart/areachart.component';
     DashboardComponent,
     TopWidgetComponent,
     AreachartComponent,
+    TableComponent,
+    SettingComponent,
+    SidenavComponent,
+    CompanyComponent,
+    UsersComponent,
+    NotifyComponent,
+    CardDetailComponent,
+    
     
   ],
   imports: [
@@ -69,9 +87,11 @@ import { AreachartComponent } from './areachart/areachart.component';
     ReactiveFormsModule,
     NgApexchartsModule,
     FlexLayoutModule,
-    
+    HttpClientModule,
+    MatChipsModule,
+    FormsModule
   ],
-  providers: [Apiservice],
+  providers: [Apiservice,BoardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

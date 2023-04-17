@@ -1,4 +1,6 @@
 @use "@angular/material" as mat;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@500&family=Kanit:wght@100&display=swap");
+
 @include mat.core();
 $bright-navy-blue-palette: (
   50: #ffebef,
@@ -57,27 +59,35 @@ $gainsboro-palette: (
   ),
 );
 $crimson-palette: (
-  50: #ffebef,
-  100: #ffcdc5,
-  200: #f0999f,
-  300: #e77179,
-  400: #f24e58,
-  500: #f83a40,
-  600: #e9313e,
-  700: #d72638,
-  800: #ca1e30,
-  900: #bb0d24,
+  50: #e3f2fd,
+  100: #badffb,
+  200: #8fcbfa,
+  300: #61b7f7,
+  400: #3ca7f6,
+  500: #0c98f5,
+  600: #078ae7,
+  700: #0078d4,
+  800: #0067c2,
+  900: #0049a3,
+  A100: #c2e4ff,
+  A200: #addcff,
+  A400: #1f9eff,
+  A700: #00518f,
   contrast: (
     50: rgba(black, 0.87),
     100: rgba(black, 0.87),
     200: rgba(black, 0.87),
     300: rgba(black, 0.87),
-    400: white,
+    400: rgba(black, 0.87),
     500: white,
     600: white,
     700: white,
     800: white,
     900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
   ),
 );
 $bluesky-primary: mat.define-palette($bright-navy-blue-palette, 700, 300, 900);
@@ -99,5 +109,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
 }

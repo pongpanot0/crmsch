@@ -1,0 +1,30 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  width: 300px;
+}
+
+.login-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.login-button {
+  width: 100%;
+}
+
+.forgot-password-button {
+  margin-left: auto;
+}
+.cs {
+  text-align: center;
+  font-size: 50px;
+}
+mat-grid-list {
+  color: "lightblue";
+}

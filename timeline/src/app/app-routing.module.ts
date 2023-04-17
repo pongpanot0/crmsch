@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TaskComponent } from './task/task.component';
 import { AddjobsComponent } from './addjobs/addjobs.component';
+import { TableComponent } from './table/table.component';
+import { SettingComponent } from './setting/setting.component';
 @Injectable({ providedIn: 'root' })
 export class CustomTitleResolver {
   resolve() {
@@ -19,7 +21,8 @@ const routes: Routes = [
     path: 'dashboard', component: SidebarComponent,
     children: [
       { path: '', component: DashboardComponent, data: { title: 'Home' } },
-      { path: 'addjob', component: AddjobsComponent, data: { title: 'Job' } },
+      { path: 'setting', component: SettingComponent, data: { title: 'Setting' } },
+      { path: 'tasks', component: TaskComponent, data: { title: 'Task' } },
 
 
     ]
